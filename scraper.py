@@ -37,9 +37,9 @@ driver = webdriver.Chrome('./scraper/chromedriver_win32/chromedriver')
 timeout = 5
 
 searchQuery = "bitcoin"
-outputFile = "news_data1.txt"
+outputFile = "news_data2.txt"
 
-currentUrl = "https://www.google.ca/search?q=" + searchQuery + "&hl=en&authuser=0&dcr=0&tbs=cdr:1,cd_min:10/1/2009,cd_max:10/5/2017&tbm=nws&ei=YaAQWpqgKovejwOkjq6oDg&start=260&sa=N&biw=1200&bih=567&dpr=2";
+currentUrl = "https://www.google.ca/search?q=" + searchQuery + "&biw=1200&bih=567&source=lnt&tbs=cdr%3A1%2Ccd_min%3A2009%2Ccd_max%3A2015&tbm=nws";
 f1=open(outputFile, 'w+')
 
 count = 0;
