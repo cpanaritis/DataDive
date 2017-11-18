@@ -13,22 +13,24 @@ searchQuery = "bitcoin"
 outputFile = "news_data.txt"
 
 currentUrl = "https://www.google.ca/search?q=" + searchQuery + "&tbm=nws&ei=Vm4QWrqZJcKJ0wLS64LoAw&start=0&sa=N&biw=1280&bih=654&dpr=2.5";
-f1=open(outputFile, 'w+')
+f1=open(out, 'w+')
 
 count = 0;
 
-while (count < 20):
+while (count < 1):
 	page = requests.get(currentUrl)
 	soup = BeautifulSoup(page.content, 'html.parser')
 
-	for article in soup.find_all("b"):
-		if article.parent.name == 'a':
-			print >> f1, article.parent.getText().encode('utf-8');
-
 	driver.get(currentUrl)#put here the adress of your page
-	elem = driver.find_element_by_id('pnnext')
-	# print(elem .get_attribute("class"))
-	elem.click();
+	
+	wrappers = driver.find_elements_by_xpath('//div[@class="g"]')
+	for wrapper in wrappers:
+		title = wrapper.find_element_by_xpath(".//a[@class='l _PMs']")
+		date = wrapper.find_element_by_xpath(".//span[@class='f nsa _QHs']")
+		print >> f1, title + "," + date
+
+	nextButton = driver.find_element_by_id('pnnext')
+	nextButton.click();
 
 	try:
 	    element_present = EC.presence_of_element_located((By.ID, 'pnnext'))
