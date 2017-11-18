@@ -6,18 +6,18 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 
-driver = webdriver.Chrome('./chromedriver_win32/chromedriver.exe')
+driver = webdriver.Chrome('./scraper/chromedriver_win32/chromedriver')
 timeout = 5
 
 searchQuery = "bitcoin"
 outputFile = "news_data.txt"
 
 currentUrl = "https://www.google.ca/search?q=" + searchQuery + "&tbm=nws&ei=Vm4QWrqZJcKJ0wLS64LoAw&start=0&sa=N&biw=1280&bih=654&dpr=2.5";
-f1=open(out, 'w+')
+f1=open(outputFile, 'w+')
 
 count = 0;
 
-while (count < 1):
+while (count < 3):
 	page = requests.get(currentUrl)
 	soup = BeautifulSoup(page.content, 'html.parser')
 
@@ -25,8 +25,8 @@ while (count < 1):
 	
 	wrappers = driver.find_elements_by_xpath('//div[@class="g"]')
 	for wrapper in wrappers:
-		title = wrapper.find_element_by_xpath(".//a[@class='l _PMs']")
-		date = wrapper.find_element_by_xpath(".//span[@class='f nsa _QHs']")
+		title = wrapper.find_element_by_xpath(".//a[@class='l _PMs']").text
+		date = wrapper.find_element_by_xpath(".//span[@class='f nsa _QHs']").text
 		print >> f1, title + "," + date
 
 	nextButton = driver.find_element_by_id('pnnext')
