@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $3.5 Million: Turkish Kidnapping Gang Targeting Bitcoin Holders ...
 Bitcoin Just Surged Past $8000. Here's What's Causing the Spike
 Up and Away? Bitcoin Price Eyes $8000 Or Higher
@@ -17,3 +18,6 @@ Bitcoin a Market for Miscreants & Millennials: 'Commodities King ...
 Major ATM Manufacturer Integrates Bitcoin, Exposure to Millions of ...
 UBS CIO: We Aren't Getting Involved With Bitcoin
 Bitcoin Nears $7900 to Hit New All-Time High
+=======
+
+>>>>>>> 4c1558933ca7c8fa5fc32f6b81ef1ba63f457b6b
