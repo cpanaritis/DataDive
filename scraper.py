@@ -37,9 +37,9 @@ driver = webdriver.Chrome('./scraper/chromedriver_win32/chromedriver')
 timeout = 5
 
 searchQuery = "bitcoin"
-outputFile = "news_data.txt"
+outputFile = "news_data1.txt"
 
-currentUrl = "https://www.google.ca/search?q=" + searchQuery + "&hl=en&authuser=0&dcr=0&tbs=cdr:1,cd_min:10/1/2009,cd_max:10/5/2017&tbm=nws&ei=jp4QWtj_M-iV0gLUwKDABA&start=0&sa=N&biw=1200&bih=567&dpr=2";
+currentUrl = "https://www.google.ca/search?q=" + searchQuery + "&hl=en&authuser=0&dcr=0&tbs=cdr:1,cd_min:10/1/2009,cd_max:10/5/2017&tbm=nws&ei=YaAQWpqgKovejwOkjq6oDg&start=260&sa=N&biw=1200&bih=567&dpr=2";
 f1=open(outputFile, 'w+')
 
 count = 0;
@@ -49,7 +49,7 @@ while (True):
     soup = BeautifulSoup(page.content, 'html.parser')
 
     driver.get(currentUrl)#put here the adress of your page
-	
+    
     wrappers = driver.find_elements_by_xpath('//div[@class="g"]')
     for wrapper in wrappers:
         title = wrapper.find_element_by_xpath(".//a[@class='l _PMs']").text.encode('utf-8');
