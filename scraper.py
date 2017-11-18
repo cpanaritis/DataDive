@@ -57,7 +57,7 @@ while (True):
         date = date.replace(",", "").replace(date[:3], monthToNum(date[:3]))
         date = date.split(" ")
         date[1] = padZero(date[1])
-        print >> f1, date[2] + "" + date[0] + "" +  date[1] + "," + title.replace(",", "")
+        print >> f1, date[2] + "" + date[0] + "" +  date[1] + "," + title.replace(",", "").replace(" ...", "")
 
     nextButton = driver.find_element_by_id('pnnext')
     nextButton.click();
