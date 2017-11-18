@@ -1,4 +1,14 @@
-﻿paper.install(window);
+﻿var input;
+var cursor;
+var hiddenInput;
+var content = [];
+var lastContent = "", targetContent = "";
+var inputLock = false;
+var autoWriteTimer;
+
+var isMobile, isIE;
+
+paper.install(window);
 window.onload = function () {
 	var canvas = document.getElementById('canvas');
 	var ctx = canvas.getContext('2d');

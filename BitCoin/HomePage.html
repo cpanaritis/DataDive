@@ -15,60 +15,24 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js'></script>
-	<style class="cp-pen-styles">
-		* {
-			margin: 0;
-			padding: 0;
-		}
-
-		body {
-			cursor: none;
-			background: #000000;
-			background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,##000000), color-stop(100%,#d6f0fd));
-			background: -webkit-radial-gradient(center, ellipse cover, ##000000 0%,#d6f0fd 100%);
-			background: radial-gradient(ellipse at center, ##000000 0%,#d6f0fd 100%);
-		}
-
-		canvas {
-			display: block;
-		}
-
-		#money {
-			position: absolute;
-			font-size: 60px;
-			font-family: sans-serif;
-			font-weight: bold;
-			color: gold;
-			left: 50%;
-			top: 40%;
-			text-shadow: 0 5px 3px rgba(0,0,0,0.5);
-			animation: breeze 1s infinite ease;
-		}
-
-		@keyframes breeze {
-			0% {
-				font-size: 60px;
-			}
-
-			50% {
-				font-size: 70px;
-			}
-
-			100% {
-				font-size: 60px;
-			}
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="HomePage.css" class="cp-pen-styles">
 </head>
 <body>
 	<div style="width:400px; margin:0 auto;">
 		<br /> <br /> <br /> <br />
-				<div class="input-group">
-					<input type="text" class="form-control" placeholder="What happened today?" style="height:46px;font-size:14pt;"/> 
-					<span class="input-group-btn">
-						<button class="btn btn-default btn-lg" type="button">Go!</button>
-					</span>
-				</div>
+
+		<div id="container">
+			<div id="input"></div>
+			<input type="text" id="hiddenInput">
+		</div>
+
+		<div class="input-group">
+			<input type="text" class="form-control" placeholder="What happened today?" style="height:46px;font-size:14pt;"/> 
+			<span class="input-group-btn">
+				<button class="btn btn-default btn-lg" type="button">Go!</button>
+			</span>
+		</div>
+
 	</div>
 	<canvas id="canvas" resize>	</canvas>
 	<div id="money">$</div>
