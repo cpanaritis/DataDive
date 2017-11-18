@@ -6,7 +6,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 
-driver = webdriver.Chrome('./chromedriver_win32/chromedriver.exe')
+driver = webdriver.Chrome('./chromedriver_win32/chromedriver')
 timeout = 5
 
 searchQuery = "bitcoin"
@@ -16,7 +16,7 @@ f1=open('./testfile.txt', 'w+')
 
 count = 0;
 
-while (count < 20):
+while (count < 10000):
 	page = requests.get(currentUrl)
 	soup = BeautifulSoup(page.content, 'html.parser')
 
