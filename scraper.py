@@ -33,7 +33,7 @@ def monthToNum(shortMonth):
 
     return dates[shortMonth]
 
-driver = webdriver.Chrome('./scraper/chromedriver_win32/chromedriver')
+driver = webdriver.Chrome('./scraper/chromedriver_win32/chromedriver.exe')
 timeout = 5
 
 searchQuery = "bitcoin"
