@@ -9,6 +9,15 @@ var isMobile, isIE;
 
 paper.install(window);
 window.onload = function () {
+
+	$.ajax({
+        url: "http://localhost:8000/backend/",
+        type: 'GET',
+        success: function(res) {
+            console.log(res);
+        }
+    });
+
 	isMobile = navigator && navigator.platform && navigator.platform.match(/^(iPad|iPod|iPhone)$/);
 
 	isIE = (navigator.appName == 'Microsoft Internet Explorer');
