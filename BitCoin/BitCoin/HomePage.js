@@ -5,7 +5,6 @@ var content = [];
 var lastContent = "", targetContent = "";
 var inputLock = false;
 var autoWriteTimer;
-
 var isMobile, isIE;
 
 paper.install(window);
@@ -92,6 +91,12 @@ window.onload = function () {
 			// Input event is buggy on IE, so don't bother
 			// (https://msdn.microsoft.com/en-us/library/gg592978(v=vs.85).aspx#feedback)
 			// We will use a timer instead (below)
+			hiddenInput.addEventListener('keypress', function (e) {
+				if (e.keyCode == 13) {
+						targetContent = "$";
+						refresh();
+				}
+			});
 			hiddenInput.addEventListener('input', function (e) {
 				e.preventDefault();
 				targetContent = hiddenInput.value;
