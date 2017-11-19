@@ -1,6 +1,4 @@
-﻿style.cp-pen-styles {
-}
-* {
+﻿* {
 	margin: 0;
 	padding: 0;
 }
@@ -15,6 +13,11 @@ body {
 
 canvas {
 	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
 }
 
 #money {
@@ -56,15 +59,16 @@ canvas {
 }
 
 #container {
+	width: 100%;
 	position: absolute;
-	top: 80px;
-	left: 50%;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	margin-top: 40px;
 }
 
 #input {
-	position: absolute;
-	margin-top: -20px;
-	margin-left: -120px;
+	border-bottom: 2px solid #DDD;
 }
 
 .letterContainer {

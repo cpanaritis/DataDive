@@ -3,18 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "BitCoin", "..\..\WebSites\BitCoin\", "{209A13F1-E468-4B63-922B-5E5DC7D94E6F}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "BitCoin", ".\BitCoin\", "{209A13F1-E468-4B63-922B-5E5DC7D94E6F}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_55080"
-		Debug.AspNetCompiler.PhysicalPath = "..\..\WebSites\BitCoin\"
+		Debug.AspNetCompiler.PhysicalPath = ".\BitCoin\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_55080\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.VirtualPath = "/localhost_55080"
-		Release.AspNetCompiler.PhysicalPath = "..\..\WebSites\BitCoin\"
+		Release.AspNetCompiler.PhysicalPath = ".\BitCoin\"
 		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_55080\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
