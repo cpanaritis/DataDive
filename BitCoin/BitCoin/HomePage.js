@@ -1,4 +1,4 @@
-﻿var input;
+var input;
 var cursor;
 var hiddenInput;
 var content = [];

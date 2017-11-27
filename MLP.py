@@ -112,7 +112,7 @@ for f in x_dataset:
     x_dataset[j] = stuff
     j = j + 1
 time2 = time.clock()
-print("Loading this bullshit took " + str(time2-time1) + " seconds")
+print("Loading this took " + str(time2-time1) + " seconds")
 
 
 # In[8]:
