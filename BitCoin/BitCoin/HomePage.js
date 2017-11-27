@@ -11,13 +11,39 @@ var isMobile, isIE;
 paper.install(window);
 window.onload = function () {
 
-	$.ajax({
-        url: "http://localhost:8000/backend/",
-        type: 'GET',
-        success: function(res) {
-            console.log(res);
-        }
-    });
+	var response;
+	var data;
+
+	$(document).keypress(function(e) {
+	    if(e.which == 13) {
+
+	    	data = ""
+
+	    	$( "div.letterStatic" ).each(function( index ) {
+			  	data = data + $( this ).text();
+			});
+
+			var postData = {
+				"words" : data
+			}
+
+	    	console.log("DATA: " + data)
+
+			$.ajax({
+		        url: "http://localhost:8000/backend/",
+		        type: 'POST',
+		        data: JSON.stringify(postData),
+			    contentType: "application/x-www-form-urlencoded",
+		        success: function(res) {
+					console.log("RES: " + res)
+		            $("#number").text(res)
+		        }
+	    	});
+	    }
+	});
+
+
+    
 
 	isMobile = navigator && navigator.platform && navigator.platform.match(/^(iPad|iPod|iPhone)$/);
 
